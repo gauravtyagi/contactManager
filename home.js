@@ -71,8 +71,8 @@ $( document ).ready( function () {
 	updateContactList();
 
 	function updateContactList() {
-		$( ".contacts-container" ).html("");
 		var allContactsJson = getAllContacts();
+		$( ".contacts-container" ).html("");
 		$.each(allContactsJson, function(i, val) {
 			contactsHtml += '<div class="contact-container">' +
 								'<div class="contact-srnum contact-col">1.</div>' +
@@ -85,7 +85,12 @@ $( document ).ready( function () {
 		$( ".contacts-container" ).html( contactsHtml );
 
 		$(".contact-container").unbind("click").click(function() {
-			contactClick();
+			var contact = {};
+			contact.name = $.trim( $( this ).find( '.contact-name' ).text() );
+			contact.num = $.trim( $( this ).find( '.contact-num' ).text() );
+			contact.city = $.trim( $( this ).find( '.contact-city' ).text() );
+
+			contactClick( contact );
 		});
 	}
 
@@ -98,7 +103,27 @@ $( document ).ready( function () {
 		$(".contact-modal").fadeOut(300);
 	});
 
-	function contactClick() {
+	$(".contact-form").submit( function () {
+		var contactsJson = {
+			'name': $('.edit-name').val(),
+			'num': $('.edit-num').val(),
+			'city': $('.edit-city').val()
+		};
+		console.log(contactsJson);
+		return false;
+	} );
+
+	function contactClick( contact ) {
+		if ( contact !== undefined ) {
+			$('.edit-name').val( contact.name );
+			$('.edit-num').val( contact.num );
+			$('.edit-city').val( contact.city );
+		}
+		else {
+			$('.edit-name').val( '' );
+			$('.edit-num').val( '' );
+			$('.edit-city').val( '' );	
+		}
 		$(".modal-backdrop").fadeIn(300);
 		$(".contact-modal").fadeIn(300);
 	}

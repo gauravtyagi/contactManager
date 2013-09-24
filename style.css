@@ -59,19 +59,25 @@ body, html {
 
 .contact-col {
 	float: left;
-	margin-right: 10px;
 }
 
 .contact-srnum {
+	width: 2%;
 	/*float: left;*/
 }
 
 .contact-name {
+	width: 10%;
 	/*float: left;*/
 }
 
 .contact-num {
+	width: 10%;
 	/*float: left;*/
+}
+
+.contact-city {
+	width: 10%;
 }
 
 .contact-icon {
