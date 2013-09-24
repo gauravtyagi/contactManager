@@ -1,0 +1,66 @@
+.home-sc {
+	margin: 0 5%;
+	/*background: red;*/
+}
+
+.home-title {
+	color: #00ae8d;
+}
+
+.btn-m {
+	background-color: #00ae8d;
+	padding: 8px 10px;
+	font-size: 0.9em;
+	color: white;
+	cursor: pointer;
+}
+
+.btn-m:hover {
+	background-color: #21c8ab;
+}
+
+.create-new {
+	/*float: left;*/
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.contacts-container {
+	overflow: hidden;
+	border: 1px solid #ccc;
+	max-height: 402px;
+	overflow: auto;
+	/*padding: 20px;*/
+}
+
+.contact-container {
+	overflow: hidden;
+	padding: 15px;
+	cursor: pointer;
+	border-bottom: 1px solid #ccc;
+}
+
+.contact-container:hover {
+	background-color: #f2f2f2;
+}
+
+.contact-col {
+	float: left;
+	margin-right: 10px;
+}
+
+.contact-srnum {
+	/*float: left;*/
+}
+
+.contact-name {
+	/*float: left;*/
+}
+
+.contact-num {
+	/*float: left;*/
+}
+
+.contact-icon {
+	/*float: left;*/
+}
