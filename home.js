@@ -75,7 +75,7 @@ $( document ).ready( function () {
 		$( ".contacts-container" ).html("");
 		$.each(allContactsJson, function(i, val) {
 			contactsHtml += '<div class="contact-container">' +
-								'<div class="contact-srnum contact-col">1.</div>' +
+								// '<div class="contact-srnum contact-col">1.</div>' +
 								'<div class="contact-icon contact-col"></div>' +
 								'<div class="contact-name contact-col">' + val['name'] + '</div>' +
 								'<div class="contact-num contact-col"> ' + val['num'] + ' </div>' +
@@ -105,11 +105,29 @@ $( document ).ready( function () {
 
 	$(".contact-form").submit( function () {
 		var contactsJson = {
+			'id': '0',
 			'name': $('.edit-name').val(),
 			'num': $('.edit-num').val(),
 			'city': $('.edit-city').val()
 		};
-		console.log(contactsJson);
+		$.ajax({
+	        url: "/AddOrEditContact",
+	        cache: false,
+	        type: "get",
+	        dataType: "json",
+	        data: "data="+contactsJson,
+	        complete: function(response){
+	        	updateContactList();
+	            // var jsonResponse=jQuery.parseJSON(response.responseText);
+	            // $(".login-loader").hide();
+	            // if(jsonResponse.gsc === gvt.SUCCESS_RESPONSE) {
+	            //     gvt.onLogIn(nextFunction, element, jsonResponse);
+	            // } else {
+	            //     gvt.loginErrorHandler(jsonResponse, data, nextFunction);
+	            // }
+	        }
+	    });
+		// console.log(contactsJson);
 		return false;
 	} );
 
