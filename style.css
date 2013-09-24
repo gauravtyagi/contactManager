@@ -1,9 +1,22 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
 .home-sc {
-	margin: 0 5%;
+	position: relative;
+	height: 100%;
 	/*background: red;*/
 }
 
+.home-container {
+	margin: 0 5%;
+}
+
 .home-title {
+	padding-top: 20px;
+	margin: 0 0 20px 0;
 	color: #00ae8d;
 }
 
@@ -63,4 +76,47 @@
 
 .contact-icon {
 	/*float: left;*/
+}
+
+.contact-modal {
+	display: none;
+	position: absolute;
+	top:30%;
+	left: 30%;
+	width: 600px;
+	height: 300px;
+	text-align: center;
+	background: white;
+	border: solid 1px #21c8ab;
+}
+
+.modal-title {
+	color: white;
+	font-size: 2em;
+	text-align: center;
+	background-color: #21c8ab;
+	padding: 30px 60px;
+}
+
+.modal-backdrop {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:  rgba(0,0,0,0.8);
+}
+
+.contact-form-table {
+	text-align: left;
+	width: 300px;
+	margin: 20px auto;
+	/*display: inline;*/
+}
+
+.contact-submit {
+	border: none;
+}
+
+.modal-cancel {
+	display: inline-block;
 }

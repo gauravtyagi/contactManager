@@ -9,28 +9,70 @@
 <script type="text/javascript" src="home.js" ></script>
 <body>
 	<div class="home-sc">
-		<h1 class="home-title">Contact Manager</h1>
-		<div class="create-new btn-m">
-			Add new contact
-		</div>
-		<div class="contacts-container">
-			<!-- <div class="contact-container">
-				<div class="contact-srnum contact-col">
-					1.
+		<div class="modal-backdrop"></div>
+
+		<div class="home-container">
+			<h1 class="home-title">Contact Manager</h1>
+			<div class="contact-modal">
+				<div class="modal-title">
+					Contact
 				</div>
-				<div class="contact-icon contact-col">
-					
-				</div>
-				<div class="contact-name contact-col">
-					Praveen
-				</div>
-				<div class="contact-num contact-col">
-					9999048676
-				</div>
-				<div class="contact-city contact-col">
-					New Delhi
-				</div>
-			</div> -->
+				<form class="contact-form" >
+					<table class="contact-form-table" >
+						<tr>
+							<td>
+								<label>Name</label>				
+							</td>
+							<td>:</td>
+							<td>
+								<input type="text" >
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Phone number</label>				
+							</td>
+							<td>:</td>
+							<td>
+								<input type="text" >
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>City</label>				
+							</td>
+							<td>:</td>
+							<td>
+								<input type="text" >
+							</td>
+						</tr>
+					</table>
+					<input type="submit" class="contact-submit btn-m" >
+					<div class="btn-m modal-cancel">Cancel</div>
+				</form>
+			</div>
+			<div class="create-new btn-m">
+				Add new contact
+			</div>
+			<div class="contacts-container">
+				<!-- <div class="contact-container">
+					<div class="contact-srnum contact-col">
+						1.
+					</div>
+					<div class="contact-icon contact-col">
+						
+					</div>
+					<div class="contact-name contact-col">
+						Praveen
+					</div>
+					<div class="contact-num contact-col">
+						9999048676
+					</div>
+					<div class="contact-city contact-col">
+						New Delhi
+					</div>
+				</div> -->
+			</div>
 		</div>
 	</div>
 </body>
